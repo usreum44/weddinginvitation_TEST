@@ -909,6 +909,17 @@ button{
 }
 
 
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+.fade.show{
+    opacity:1;
+}
 
 .contact-card h3{
 
