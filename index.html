@@ -2,311 +2,274 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>신민철 ♥ 정예슬</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
 
-<style>
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
-:root{
-    --bg:#f8f5f0;
-    --card:#ffffff;
-    --point:#c8b59c;
-    --text:#333;
-    --sub:#777;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Pretendard',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.8;
-}
-
-.section{
-    padding:60px 24px;
-    text-align:center;
-}
-
-.hero{
-    height:80vh;
-    background:url('./images/main.jpg') center center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    position:relative;
-}
-
-.hero::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.25);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-}
-
-.hero h1{
-    font-family:'Noto Serif KR',serif;
-    font-size:2.2rem;
-    font-weight:400;
-}
-
-.hero p{
-    margin-top:16px;
-    font-size:1rem;
-}
-
-.quote{
-    font-family:'Noto Serif KR',serif;
-    font-size:1.1rem;
-    max-width:600px;
-    margin:auto;
-}
-
-.card{
-    background:var(--card);
-    border-radius:20px;
-    padding:24px;
-    max-width:700px;
-    margin:20px auto;
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
-
-.title{
-    font-family:'Noto Serif KR',serif;
-    font-size:1.6rem;
-    margin-bottom:20px;
-}
-
-.dday{
-    font-size:2rem;
-    color:var(--point);
-    font-weight:600;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.gallery img{
-    width:100%;
-    border-radius:12px;
-    display:block;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 18px;
-    border:none;
-    border-radius:12px;
-    background:var(--point);
-    color:white;
-    cursor:pointer;
-    margin:5px;
-    text-decoration:none;
-}
-
-.account{
-    margin-top:12px;
-    padding:15px;
-    border:1px solid #eee;
-    border-radius:12px;
-}
-
-.footer{
-    padding:50px;
-    color:#999;
-    font-size:.9rem;
-}
-
-</style>
 </head>
 
 <body>
 
+<!-- Floating Share -->
+
+<button id="shareBtn">
+    <i class="ri-kakao-talk-fill"></i>
+</button>
+
+<!-- Hero -->
+
 <section class="hero">
+
+    <div class="overlay"></div>
+
     <div class="hero-content">
-        <h1>신민철 ♥ 정예슬</h1>
-        <p>2027.03.20 SAT</p>
+
+        <span>Wedding Invitation</span>
+
+        <h1>
+            MINCHEOL
+            <br>
+            ♥
+            <br>
+            YESEUL
+        </h1>
+
+        <p>
+            2026.10.03 SAT
+            <br>
+            PM 12:20
+        </p>
+
     </div>
+
 </section>
 
-<section class="section">
+<!-- Intro -->
 
-    <div class="quote">
-        수많은 사람들 속에서<br>
-        서로를 알아본 우연을 기쁘게 여기며,<br>
+<section class="section fade">
+
+    <h2>우리의 첫 페이지</h2>
+
+    <p>
+        수많은 사람들 속에서
+        서로를 알아본 우연을 기쁘게 여기며,
         이제 우리의 첫 페이지를 시작합니다.
-    </div>
+    </p>
 
 </section>
 
-<section class="section">
+<!-- Wedding Info -->
 
-    <div class="card">
+<section class="section card fade">
 
-        <div class="title">Wedding Day</div>
+    <h2>Wedding Day</h2>
 
-        <p>
-            2027년 3월 20일 토요일<br>
-            오후 1시
-        </p>
+    <p>
+        2026년 10월 3일 토요일
+        오후 12시 20분
+    </p>
 
-        <br>
-
-        <p>
-            AK플라자 광명점 5층
-        </p>
-
-    </div>
+    <p>
+        AK플라자 광명점
+    </p>
 
 </section>
 
-<section class="section">
+<!-- DDAY -->
 
-    <div class="card">
+<section class="section card fade">
 
-        <div class="title">우리의 결혼식까지</div>
+    <h2>D-Day</h2>
 
-        <div class="dday" id="dday">
-            계산중...
+    <div id="dday"></div>
+
+</section>
+
+<!-- Story -->
+
+<section class="section fade">
+
+    <h2>Our Story</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            🕊️
+
+            비둘기가 소개해준
+            특별한 인연
+
+        </div>
+
+        <div class="timeline-item">
+
+            ☕
+
+            친구처럼 대화하던
+            두 사람
+
+        </div>
+
+        <div class="timeline-item">
+
+            💍
+
+            이제 평생의 동반자가 됩니다
+
         </div>
 
     </div>
 
 </section>
 
-<section class="section">
+<!-- Bride Groom -->
 
-    <div class="title">Gallery</div>
+<section class="section fade">
 
-    <div class="gallery">
+    <div class="people">
 
-        <img src="./images/gallery1.jpg" alt="">
-        <img src="./images/gallery2.jpg" alt="">
-        <img src="./images/gallery3.jpg" alt="">
-        <img src="./images/gallery4.jpg" alt="">
-        <img src="./images/gallery5.jpg" alt="">
-        <img src="./images/gallery6.jpg" alt="">
+        <div>
 
-    </div>
+            <img src="./images/profile-groom.jpg">
 
-</section>
+            <h3>신민철</h3>
 
-<section class="section">
+            <p>
+            웃음이 많은 사람
+            </p>
 
-    <div class="title">마음 전하실 곳</div>
-
-    <div class="card">
-
-        <div class="account">
-            <strong>신랑 신민철</strong><br>
-            국민은행 000000-00-000000
-
-            <br><br>
-
-            <button class="btn"
-                onclick="copyAccount('국민은행 000000000000')">
-                계좌번호 복사
-            </button>
         </div>
 
-        <br>
+        <div>
 
-        <div class="account">
-            <strong>신부 정예슬</strong><br>
-            신한은행 000-000-000000
+            <img src="./images/profile-bride.jpg">
 
-            <br><br>
+            <h3>정예슬</h3>
 
-            <button class="btn"
-                onclick="copyAccount('000000000000')">
-                계좌번호 복사
-            </button>
+            <p>
+            소소한 행복을 사랑하는 사람
+            </p>
+
         </div>
 
     </div>
 
 </section>
 
-<section class="section">
+<!-- Gallery -->
 
-    <div class="title">오시는 길</div>
+<section class="section fade">
 
-    <div class="card">
+<h2>Gallery</h2>
 
-        경기 광명시 양지로 17<br>
-        AK플라자 광명점 5층
+<div class="gallery">
 
-        <br><br>
+<img src="./images/gallery1.jpg">
+<img src="./images/gallery2.jpg">
+<img src="./images/gallery3.jpg">
+<img src="./images/gallery4.jpg">
 
-        <a
-        class="btn"
-        href="https://map.kakao.com"
-        target="_blank">
-        카카오맵
-        </a>
-
-        <a
-        class="btn"
-        href="https://map.naver.com"
-        target="_blank">
-        네이버지도
-        </a>
-
-    </div>
-
-</section>
-
-<div class="footer">
-    MINCHEOL ♥ YESEUL
 </div>
 
-<script>
+</section>
 
-const weddingDate = new Date('2027-03-20T13:00:00');
+<!-- Lightbox -->
 
-function updateDday(){
+<div id="lightbox">
 
-    const now = new Date();
+<img id="lightboxImage">
 
-    const diff = weddingDate - now;
+</div>
 
-    const days = Math.ceil(
-        diff / (1000 * 60 * 60 * 24)
-    );
+<!-- Accounts -->
 
-    document.getElementById('dday').innerHTML =
-        'D-' + days;
-}
+<section class="section card fade">
 
-updateDday();
+<h2>마음 전하실 곳</h2>
 
-function copyAccount(account){
+<button class="account-btn">
+신랑측 계좌보기
+</button>
 
-    navigator.clipboard.writeText(account);
+<button class="account-btn">
+신부측 계좌보기
+</button>
 
-    alert('계좌번호가 복사되었습니다.');
-}
+</section>
 
-</script>
+<!-- RSVP -->
+
+<section class="section fade">
+
+<h2>참석 여부</h2>
+
+<form id="rsvpForm">
+
+<input placeholder="성함">
+
+<input placeholder="연락처">
+
+<select>
+<option>참석합니다</option>
+<option>참석이 어렵습니다</option>
+</select>
+
+<textarea
+placeholder="전달사항">
+</textarea>
+
+<button type="submit">
+제출
+</button>
+
+</form>
+
+</section>
+
+<!-- Map -->
+
+<section class="section fade">
+
+<h2>오시는 길</h2>
+
+<div class="map-box">
+
+약도 SVG 삽입
+
+</div>
+
+<a href="#">
+카카오맵
+</a>
+
+<a href="#">
+네이버지도
+</a>
+
+</section>
+
+<!-- Parents -->
+
+<section class="section fade">
+
+<h2>혼주 연락</h2>
+
+<a href="tel:01012341234">
+신랑측 혼주
+</a>
+
+<a href="tel:01012341234">
+신부측 혼주
+</a>
+
+</section>
+
+<script src="./js/main.js"></script>
 
 </body>
 </html>
