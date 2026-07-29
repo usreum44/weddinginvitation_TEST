@@ -382,6 +382,7 @@ window.addEventListener(
 // 8. Contact Modal
 // ===================================
 
+observer.observe(element);
 
 const contactModal =
 document.getElementById(
