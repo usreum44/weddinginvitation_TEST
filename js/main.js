@@ -384,6 +384,10 @@ window.addEventListener(
 
 observer.observe(element);
 
+window.openContact = openContact;
+window.closeContact = closeContact;
+
+     
 const contactModal =
 document.getElementById(
 "contactModal"
@@ -620,7 +624,9 @@ function closeContact(){
 
 }
 
-     
+     /* 추가 */
+window.openContact = openContact;
+window.closeContact = closeContact;
 
 
     }
