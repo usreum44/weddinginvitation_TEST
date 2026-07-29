@@ -251,7 +251,7 @@ button{
 
 .card h2{
 
-    margin-bottom:25px;
+    margin-bottom:40px;
 
 }
 
@@ -262,6 +262,8 @@ button{
 
 #dday{
 
+    margin-top:40px;
+   
     font-size:42px;
 
     font-weight:500;
@@ -565,6 +567,41 @@ button{
 }
 
 
+
+/*----------- parking transport --------------*/
+.transport-card{
+
+    text-align:left;
+
+}
+
+
+.transport-card h3{
+
+    font-family:
+    "Noto Serif KR",
+    serif;
+
+    font-size:20px;
+
+    font-weight:400;
+
+    margin-bottom:12px;
+
+    color:#4B443D;
+
+}
+
+
+.transport-card p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
 /* ---------- Floating Share ---------- */
 
 
@@ -694,11 +731,52 @@ button{
 
 
 
-    #dday{
+#dday{
 
-        font-size:36px;
+    font-size:42px;
+
+    font-weight:600;
+
+    color:var(--main);
+
+    animation:
+
+    ddayPulse 2s infinite;
+
+}
+
+
+@keyframes ddayPulse{
+
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
 
     }
+
+
+    50%{
+
+        transform:scale(1.08);
+
+        opacity:.8;
+
+    }
+
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+
+}
 
 
 }
