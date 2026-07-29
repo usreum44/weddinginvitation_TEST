@@ -376,5 +376,251 @@ window.addEventListener(
         );
 
 
+
+
+// ===================================
+// 8. Contact Modal
+// ===================================
+
+
+const contactModal =
+document.getElementById(
+"contactModal"
+);
+
+
+
+const contactContent =
+document.getElementById(
+"contactContent"
+);
+
+
+
+function openContact(type){
+
+
+    contactModal.classList.add(
+        "active"
+    );
+
+
+
+    if(type==="couple"){
+
+
+        contactContent.innerHTML = `
+
+
+        <h2>신랑 · 신부에게 연락하기</h2>
+
+
+        <div class="contact-card">
+
+
+            <div class="contact-row">
+
+                <span class="contact-name">
+                신랑 신민철
+                </span>
+
+
+                <div class="contact-buttons">
+
+                <a href="tel:01000000000">
+                ☎
+                </a>
+
+
+                <a href="sms:01000000000">
+                ✉
+                </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="contact-row">
+
+                <span class="contact-name">
+                신부 정예슬
+                </span>
+
+
+                <div class="contact-buttons">
+
+                <a href="tel:01000000000">
+                ☎
+                </a>
+
+
+                <a href="sms:01000000000">
+                ✉
+                </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        `;
+
+
+    }
+
+
+
+    else{
+
+
+        contactContent.innerHTML = `
+
+
+        <h2>혼주에게 연락하기</h2>
+
+
+        <h3>
+        신랑측
+        </h3>
+
+
+        <div class="parent-grid">
+
+
+        <div class="parent-box">
+
+        <h4>
+        아버지<br>
+        신랑부
+        </h4>
+
+        <div class="parent-buttons">
+
+        <a href="tel:01000000000">☎</a>
+
+        <a href="sms:01000000000">✉</a>
+
+        </div>
+
+        </div>
+
+
+
+        <div class="parent-box">
+
+        <h4>
+        어머니<br>
+        신랑모
+        </h4>
+
+
+        <div class="parent-buttons">
+
+        <a href="tel:01000000000">☎</a>
+
+        <a href="sms:01000000000">✉</a>
+
+        </div>
+
+        </div>
+
+
+
+        </div>
+
+
+
+        <br>
+
+
+
+        <h3>
+        신부측
+        </h3>
+
+
+        <div class="parent-grid">
+
+
+        <div class="parent-box">
+
+        <h4>
+        아버지<br>
+        신부부
+        </h4>
+
+
+        <div class="parent-buttons">
+
+        <a href="tel:01000000000">☎</a>
+
+        <a href="sms:01000000000">✉</a>
+
+        </div>
+
+
+        </div>
+
+
+
+        <div class="parent-box">
+
+
+        <h4>
+        어머니<br>
+        신부모
+        </h4>
+
+
+        <div class="parent-buttons">
+
+        <a href="tel:01000000000">☎</a>
+
+        <a href="sms:01000000000">✉</a>
+
+        </div>
+
+
+        </div>
+
+
+
+        </div>
+
+
+
+        `;
+
+
+    }
+
+
+}
+
+
+
+
+function closeContact(){
+
+
+    contactModal.classList.remove(
+        "active"
+    );
+
+
+}
+
+     
+
+
     }
 );
