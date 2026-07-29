@@ -242,22 +242,79 @@ AK플라자 광명점 주차장 이용 가능<br>
 </section>
 
 </section>
+
+
+
+
+    
 <!-- Parents -->
 
-<section class="section fade">
+<section class="section fade contact-section">
 
-<h2>혼주 연락</h2>
 
-<a href="tel:01012341234">
-신랑측 혼주
-</a>
+<h2>
+연락하기
+</h2>
 
-<a href="tel:01012341234">
-신부측 혼주
-</a>
+
+<button 
+class="contact-main-btn"
+onclick="openContact('couple')">
+
+💍 신랑 · 신부에게 연락하기
+
+</button>
+
+
+
+<button 
+class="contact-main-btn"
+onclick="openContact('parents')">
+
+🌿 혼주에게 연락하기
+
+</button>
+
+
 
 </section>
 
+
+
+
+<!-- 연락 팝업 -->
+
+<div id="contactModal" class="modal">
+
+
+<div class="modal-content">
+
+
+<button 
+class="close-btn"
+onclick="closeContact()">
+
+×
+
+</button>
+
+
+
+<div id="contactContent">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+    
 <!-- Accounts -->
 
 <section class="section card fade">
