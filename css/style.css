@@ -1,17 +1,699 @@
-fade animation
+/* =====================================
+   Wedding Invitation V1
+   MINCHEOL ♥ YESEUL
+===================================== */
 
-scroll reveal
 
-gallery hover
+/* ---------- Reset ---------- */
 
-card shadow
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-mobile responsive
+html{
+    scroll-behavior:smooth;
+}
 
-lightbox
+body{
 
-timeline
+    font-family:
+    "Pretendard",
+    "Noto Sans KR",
+    sans-serif;
 
-beige color system
+    background:#F8F5F0;
 
-sticky share button
+    color:#4B443D;
+
+    line-height:1.7;
+
+    letter-spacing:-0.02em;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+
+button{
+
+    font-family:inherit;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ---------- Color ---------- */
+
+:root{
+
+    --main:#CDB79E;
+
+    --dark:#4B443D;
+
+    --light:#F8F5F0;
+
+    --white:#FFFFFF;
+
+    --border:#E8DED1;
+
+}
+
+
+
+/* ---------- Common Section ---------- */
+
+
+.section{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    padding:80px 24px;
+
+    text-align:center;
+
+}
+
+
+
+.section h2{
+
+    font-family:
+    "Noto Serif KR",
+    serif;
+
+    font-size:28px;
+
+    font-weight:400;
+
+    margin-bottom:35px;
+
+    color:#3F382F;
+
+}
+
+
+
+.section p{
+
+    font-size:15px;
+
+    color:#71685F;
+
+}
+
+
+
+/* ---------- Hero ---------- */
+
+
+.hero{
+
+    height:100vh;
+
+    min-height:650px;
+
+    background-image:url("../images/main.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+}
+
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.35)
+    );
+
+}
+
+
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+
+
+.hero-content span{
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    opacity:.9;
+
+}
+
+
+
+.hero h1{
+
+    margin:35px 0;
+
+    font-family:
+    "Noto Serif KR",
+    serif;
+
+    font-size:48px;
+
+    font-weight:300;
+
+    line-height:1.35;
+
+}
+
+
+
+.hero p{
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+
+/* ---------- Card ---------- */
+
+
+.card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:35px 25px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.06);
+
+}
+
+
+
+.card h2{
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* ---------- D-Day ---------- */
+
+
+#dday{
+
+    font-size:42px;
+
+    font-weight:500;
+
+    color:var(--main);
+
+}
+
+
+
+/* ---------- Story Timeline ---------- */
+
+
+.timeline{
+
+    position:relative;
+
+    margin-top:30px;
+
+}
+
+
+
+.timeline::before{
+
+    content:"";
+
+    width:1px;
+
+    height:100%;
+
+    background:#DDD0BE;
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+}
+
+
+
+.timeline-item{
+
+    background:white;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+    position:relative;
+
+}
+
+
+
+/* ---------- Profile ---------- */
+
+
+.people{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+
+.people > div{
+
+    flex:1;
+
+}
+
+
+
+.people img{
+
+    width:130px;
+
+    height:130px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+
+
+.people h3{
+
+    font-size:20px;
+
+    font-weight:500;
+
+    margin-bottom:10px;
+
+}
+
+
+
+/* ---------- Gallery ---------- */
+
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+
+
+.gallery img{
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.gallery img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+
+/* ---------- Lightbox ---------- */
+
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.85);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:999;
+
+}
+
+
+
+#lightbox.active{
+
+    display:flex;
+
+}
+
+
+
+#lightbox img{
+
+    max-width:90%;
+
+    max-height:80%;
+
+    border-radius:10px;
+
+}
+
+
+
+/* ---------- Buttons ---------- */
+
+
+.btn,
+.account-btn,
+#rsvpForm button{
+
+    display:inline-block;
+
+    padding:14px 25px;
+
+    border-radius:50px;
+
+    background:var(--main);
+
+    color:white;
+
+    margin:8px;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover,
+.account-btn:hover{
+
+    opacity:.8;
+
+}
+
+
+
+/* ---------- RSVP ---------- */
+
+
+#rsvpForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+#rsvpForm input,
+#rsvpForm textarea,
+#rsvpForm select{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    font-size:15px;
+
+}
+
+
+
+#rsvpForm textarea{
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+
+/* ---------- Map ---------- */
+
+
+.map-box{
+
+    width:100%;
+
+    height:280px;
+
+    background:#eee7dd;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#999;
+
+}
+
+
+
+/* ---------- Floating Share ---------- */
+
+
+#shareBtn{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#FEE500;
+
+    color:#3A1D1D;
+
+    font-size:25px;
+
+    z-index:100;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+/* ---------- Scroll Animation ---------- */
+
+
+.fade{
+
+    opacity:0;
+
+    transform:
+
+    translateY(40px);
+
+    transition:
+
+    opacity .8s ease,
+
+    transform .8s ease;
+
+}
+
+
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/* ---------- Footer ---------- */
+
+
+.footer{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    color:#AAA;
+
+    font-size:13px;
+
+}
+
+
+
+/* ---------- Mobile ---------- */
+
+
+@media(max-width:480px){
+
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+
+
+    .section{
+
+        padding:60px 20px;
+
+    }
+
+
+
+    .section h2{
+
+        font-size:24px;
+
+    }
+
+
+
+    .people{
+
+        gap:10px;
+
+    }
+
+
+
+    .people img{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+
+
+    #dday{
+
+        font-size:36px;
+
+    }
+
+
+}
