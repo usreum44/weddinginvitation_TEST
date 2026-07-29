@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>신민철 ♥ 정예슬</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#f8f5f0;
+    --card:#ffffff;
+    --point:#c8b59c;
+    --text:#333;
+    --sub:#777;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Pretendard',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.8;
+}
+
+.section{
+    padding:60px 24px;
+    text-align:center;
+}
+
+.hero{
+    height:80vh;
+    background:url('./images/main.jpg') center center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.25);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-family:'Noto Serif KR',serif;
+    font-size:2.2rem;
+    font-weight:400;
+}
+
+.hero p{
+    margin-top:16px;
+    font-size:1rem;
+}
+
+.quote{
+    font-family:'Noto Serif KR',serif;
+    font-size:1.1rem;
+    max-width:600px;
+    margin:auto;
+}
+
+.card{
+    background:var(--card);
+    border-radius:20px;
+    padding:24px;
+    max-width:700px;
+    margin:20px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.title{
+    font-family:'Noto Serif KR',serif;
+    font-size:1.6rem;
+    margin-bottom:20px;
+}
+
+.dday{
+    font-size:2rem;
+    color:var(--point);
+    font-weight:600;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    display:block;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 18px;
+    border:none;
+    border-radius:12px;
+    background:var(--point);
+    color:white;
+    cursor:pointer;
+    margin:5px;
+    text-decoration:none;
+}
+
+.account{
+    margin-top:12px;
+    padding:15px;
+    border:1px solid #eee;
+    border-radius:12px;
+}
+
+.footer{
+    padding:50px;
+    color:#999;
+    font-size:.9rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>신민철 ♥ 정예슬</h1>
+        <p>2027.03.20 SAT</p>
+    </div>
+</section>
+
+<section class="section">
+
+    <div class="quote">
+        수많은 사람들 속에서<br>
+        서로를 알아본 우연을 기쁘게 여기며,<br>
+        이제 우리의 첫 페이지를 시작합니다.
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="card">
+
+        <div class="title">Wedding Day</div>
+
+        <p>
+            2027년 3월 20일 토요일<br>
+            오후 1시
+        </p>
+
+        <br>
+
+        <p>
+            AK플라자 광명점 5층
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="card">
+
+        <div class="title">우리의 결혼식까지</div>
+
+        <div class="dday" id="dday">
+            계산중...
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="title">Gallery</div>
+
+    <div class="gallery">
+
+        <img src="./images/gallery1.jpg" alt="">
+        <img src="./images/gallery2.jpg" alt="">
+        <img src="./images/gallery3.jpg" alt="">
+        <img src="./images/gallery4.jpg" alt="">
+        <img src="./images/gallery5.jpg" alt="">
+        <img src="./images/gallery6.jpg" alt="">
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="title">마음 전하실 곳</div>
+
+    <div class="card">
+
+        <div class="account">
+            <strong>신랑 신민철</strong><br>
+            국민은행 000000-00-000000
+
+            <br><br>
+
+            <button class="btn"
+                onclick="copyAccount('국민은행 000000000000')">
+                계좌번호 복사
+            </button>
+        </div>
+
+        <br>
+
+        <div class="account">
+            <strong>신부 정예슬</strong><br>
+            신한은행 000-000-000000
+
+            <br><br>
+
+            <button class="btn"
+                onclick="copyAccount('000000000000')">
+                계좌번호 복사
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="title">오시는 길</div>
+
+    <div class="card">
+
+        경기 광명시 양지로 17<br>
+        AK플라자 광명점 5층
+
+        <br><br>
+
+        <a
+        class="btn"
+        href="https://map.kakao.com"
+        target="_blank">
+        카카오맵
+        </a>
+
+        <a
+        class="btn"
+        href="https://map.naver.com"
+        target="_blank">
+        네이버지도
+        </a>
+
+    </div>
+
+</section>
+
+<div class="footer">
+    MINCHEOL ♥ YESEUL
+</div>
+
+<script>
+
+const weddingDate = new Date('2027-03-20T13:00:00');
+
+function updateDday(){
+
+    const now = new Date();
+
+    const diff = weddingDate - now;
+
+    const days = Math.ceil(
+        diff / (1000 * 60 * 60 * 24)
+    );
+
+    document.getElementById('dday').innerHTML =
+        'D-' + days;
+}
+
+updateDday();
+
+function copyAccount(account){
+
+    navigator.clipboard.writeText(account);
+
+    alert('계좌번호가 복사되었습니다.');
+}
+
+</script>
+
+</body>
+</html>
