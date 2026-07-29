@@ -382,7 +382,6 @@ window.addEventListener(
 // 8. Contact Modal
 // ===================================
 
-observer.observe(element);
 
 window.openContact = openContact;
 window.closeContact = closeContact;
