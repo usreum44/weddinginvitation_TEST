@@ -775,6 +775,270 @@ button{
 
     }
 
+/* ==========================
+   Contact Modal
+========================== */
+
+
+.contact-main-btn{
+
+    width:100%;
+
+    max-width:320px;
+
+    margin:10px auto;
+
+    padding:16px;
+
+    border-radius:50px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    color:#4B443D;
+
+    font-size:15px;
+
+}
+
+
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.45);
+
+    z-index:9999;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.modal.active{
+
+    display:flex;
+
+}
+
+
+
+.modal-content{
+
+
+    width:90%;
+
+    max-width:420px;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:35px 25px;
+
+    position:relative;
+
+    animation:
+
+    modalUp .3s ease;
+
+
+}
+
+
+
+@keyframes modalUp{
+
+
+    from{
+
+        transform:translateY(30px);
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+.close-btn{
+
+    position:absolute;
+
+    right:20px;
+
+    top:15px;
+
+    background:none;
+
+    font-size:28px;
+
+    color:#999;
+
+}
+
+
+
+/* 연락 카드 */
+
+
+.contact-card{
+
+    margin-top:25px;
+
+}
+
+
+
+.contact-card h3{
+
+    font-family:
+    "Noto Serif KR",
+    serif;
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.contact-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.contact-name{
+
+    font-size:15px;
+
+}
+
+
+
+.contact-buttons a{
+
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    width:42px;
+
+    height:42px;
+
+
+    border-radius:50%;
+
+    background:#F8F5F0;
+
+
+    margin-left:8px;
+
+
+    font-size:20px;
+
+}
+
+
+
+/* 부모님 2열 */
+
+
+.parent-grid{
+
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+
+}
+
+
+
+.parent-box{
+
+
+    background:#FAF7F2;
+
+    padding:15px;
+
+    border-radius:18px;
+
+}
+
+
+.parent-box h4{
+
+    font-size:14px;
+
+    margin-bottom:10px;
+
+}
+
+
+.parent-buttons a{
+
+    display:inline-flex;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:white;
+
+    margin:3px;
+
+}
+
+   
+
+
+   
 
 }
 
